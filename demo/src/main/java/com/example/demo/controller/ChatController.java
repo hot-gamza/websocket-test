@@ -10,7 +10,7 @@ import org.springframework.stereotype.Controller;
 public class ChatController {
 
     @MessageMapping("/id") // /app/id/
-    @SendTo("/id-receive") // /id-receive/uuid로 데이터 전송
+    @SendTo("/id-receive") // /id-receive/uuid로 데이터 전송할 수 있게 만들어 줘
     public Message receivePublicMessage(@Payload Message message){
         System.out.println(message);
         return message;
